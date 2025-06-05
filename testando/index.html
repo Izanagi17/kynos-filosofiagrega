@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste Fundo Animado</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .fundo-animado {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+      background: 
+        radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.15), transparent 30%),
+        radial-gradient(circle at 75% 75%, rgba(0, 128, 255, 0.12), transparent 30%);
+      background-size: 400% 400%;
+      animation: animarFundo 60s ease-in-out infinite;
+    }
+
+    @keyframes animarFundo {
+      0% {
+        background-position: 0% 0%, 100% 100%;
+      }
+      100% {
+        background-position: 100% 100%, 0% 0%;
+      }
+    }
+
+    .conteudo {
+      position: relative;
+      padding: 50px;
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="fundo-animado"></div>
+  <div class="conteudo">
+    <h1>Teste de Fundo Animado</h1>
+    <p>Se você está vendo padrões em movimento suave atrás desse texto, está funcionando!</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,399 @@
+/* Estrutura Principal*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* fundo estilo clássico */
+    background-attachment: fixed;
+    color: white;
+}
+
+
+/* Header */
+header {
+    margin: 0px 0px 0px 230px;
+    color: white;
+    padding: 40px 20px 20px;
+    text-align: center;
+    border-bottom: 3px solid #00ffff;
+    position: sticky;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+header p {
+    font-style: italic;
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+/* Navigation */
+header nav {
+    margin-top: 20px;
+}
+
+header nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efeito de hover moderno com sublinhado animado*/
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #00ffff;
+    transition: width 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ffffff;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+/* Sidebar Fixa */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: rgba(58, 81, 82, 0.363) ;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-radius: 40px;
+    margin: 10px 10px 1000px 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+.sidebar a {
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+/* Efeito sidebar moderno com sublinhado animado*/
+.sidebar ul::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #00ffff;
+    transition: width 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+}
+
+.sidebar a:hover::after {
+  width: 100%;
+}
+/* Conteúdo Principal */
+
+.container {
+    margin-left: 220px; 
+    padding: 20px 20px 20px 120px;
+    box-sizing: border-box;
+}
+
+.container a{
+  text-decoration: none;
+  color: #8d8d8d;
+  cursor: pointer;
+}
+
+.container a:hover{
+  text-decoration: none;
+  color: #ffffff;
+  text-wrap: bold;
+  text-decoration: underline;
+  text-decoration-color: #00ffff;
+  text-decoration-thickness: 2px;
+}
+.conteudo {
+    max-width: 800px;
+}
+
+.conteudo h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00ffff;
+    text-align: center;
+}
+
+.conteudo :hover{
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 87, 102, 0.3);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.conteudo img {
+  width: 300px; /* Largura padrão da imagem */
+  height: auto; /* Altura auto para manter a proporção */
+  transition: transform 0.3s ease-in-out; /* Transição suave */
+}
+
+.conteudo img:hover {
+  transform: scale(1.5); /* Aumenta a imagem em 50% */
+  box-shadow: 0 6px 20px rgba(0, 87, 102, 0.3); /* Sombra ao passar o mouse */
+  transition: transform 0.3s ease-in-out; /* Transição suave */
+  opacity: 1; /* Garante que a imagem esteja visível */
+  filter: brightness(1.2); /* Leve brilho ao passar o mouse */
+}
+
+.conteudo section {
+  background: rgba(15, 187, 255, 0.075); /* leve transparência branca */
+  backdrop-filter: blur(10px); /* efeito "vidro" */
+  -webkit-backdrop-filter: blur(10px); /* suporte para Safari */
+  border: 1px solid rgba(214, 235, 255, 0.233);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 87, 102, 0.247);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.imagem-conteudo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.imagem-conteudo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#info-autor {
+  padding: 10px;
+  border-radius: 40px;
+  color: rgb(206, 206, 206);
+}
+
+#info-autor :hover {
+  transform: scale(1.01); /* Aumenta a imagem em 50% */
+  transition: transform 0.3s ease-in-out; /* Transição suave */
+  opacity: 1; /* Garante que a imagem esteja visível */
+  filter: brightness(1.5); /* Leve brilho ao passar o mouse */
+  border-radius: 40px;
+  cursor: none;
+  color: white;
+}
+
+/*BackGround*/
+.figurinha {
+    position: fixed;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 255, 0.1);
+    animation: flutuar 20s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.figurinha1 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.figurinha2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  left: 80%;
+  animation-delay: 5s;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50px) rotate(360deg);
+  }
+}
+
+.rodape {
+  background: #111;
+  color: #eee;
+  padding: 40px 20px 30px;
+  border-top: 3px solid #00ffff;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  position: relative;
+}
+
+.rodape blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin: 0 auto 20px;
+  max-width: 700px;
+  color: #ccc;
+  line-height: 1.6;
+  position: relative;
+}
+
+.rodape blockquote span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #00ffff;
+}
+
+.rodape-links {
+  margin: 20px 0;
+}
+
+.rodape-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+  position: relative;
+}
+
+.rodape-conteudo a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+  position: relative;
+}
+
+.rodape-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #00ffff;
+  transition: width 0.3s ease;
+}
+
+.rodape-links a:hover::after {
+  width: 100%;
+}
+
+.assinatura {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 30px;
+}
+
+/*CONTATO CSS*/
+.contato-section {
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.contato-section h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #2d3e50;
+}
+
+#form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#form-contato label {
+    font-weight: bold;
+    color: #2d3e50;
+}
+
+#form-contato input,
+#form-contato textarea {
+    padding: 10px;
+    border: 1px solid #bfc9d1;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+}
+
+#form-contato button {
+    background: #2d3e50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#form-contato button:hover {
+    background: #1a2533;
+}
+
+.mensagem-sucesso {
+    color: #2e7d32;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.contato-info-extra {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.contato-info-extra h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #2d3e50;
+}
+
+.contato-info-extra ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contato-info-extra li {
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.contato-info-extra a {
+    color: #2d3e50;
+    text-decoration: underline;
+}
