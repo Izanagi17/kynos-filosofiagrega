@@ -12,6 +12,7 @@ body {
 .table-responsive {
     width: 100%;
     overflow-x: auto;
+    overflow-y: auto;
 }
 
 /* Ajusta fonte e padding em telas pequenas */
