@@ -8,6 +8,23 @@ body {
     color: white;
 }
 
+/*Pemitir rolagem horizontal em telas pequenas*/
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Ajusta fonte e padding em telas pequenas */
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px 6px;
+        font-size: 13px;
+    }
+}
 
 /* Header */
 header {
